@@ -1,0 +1,188 @@
+{
+  "Monday":[
+    {
+      "id":1,
+      "item": "Rice",
+      "ingredients": "Rice, Onions, Green bell pepper, Oil, Pilau Masala"
+    },
+    {
+      "id":"Potatoe_Chips",
+      "item": "Potatoe Chips",
+      "ingredients": "Potatoes, Oil"
+    },
+    {
+      "id":"Sweet_Potato",
+      "item": "Sweet Potato",
+      "ingredients": "Sweet Potatoe"
+    },
+    {
+      "id":"Vegetables",
+      "item": "Vegetables",
+      "ingredients": "Dodo, onions, Tomatoes, Intoryi, Oil, Garlic"
+    },
+    {
+      "id":"Beans",
+      "item": "Beans",
+      "ingredients": "Beans, Onions, Tomato Paste"
+    },
+    {
+      "id":"Chicken_Meat",
+      "item": "Chicken Meat",
+      "ingredients": "Chicken, Onions, Green bell Pepper, celery, Chicken Masara, Cube Maggie, Black Pepper, Oil"
+    },
+    {
+      "id":"Sauce",
+      "item": "Sauce",
+      "ingredients": "Onions, Green bell Pepper, celery, Beef Masara, Cube Maggie, Black Pepper, Oil, Flour"
+    }
+  ],
+  "Tuesday":[
+    {
+      "id":2,
+      "item": "Rice",
+      "ingredients": "Rice, Onions, Green bell pepper, Oil, Pilau Masala"
+    },
+    {
+      "id":"Potatoe_Chips",
+      "item": "Potatoe Chips",
+      "ingredients": "Potatoes, Oil"
+    },
+    {
+      "id":"Sweet_Potato",
+      "item": "Sweet Potato",
+      "ingredients": "Sweet Potatoe"
+    },
+    {
+      "id":"Vegetables",
+      "item": "Vegetables",
+      "ingredients": "Dodo, onions, Tomatoes, Intoryi, Oil, Garlic"
+    },
+    {
+      "id":"Beans",
+      "item": "Beans",
+      "ingredients": "Beans, Onions, Tomato Paste"
+    },
+    {
+      "id":"Chicken_Meat",
+      "item": "Chicken Meat",
+      "ingredients": "Chicken, Onions, Green bell Pepper, celery, Chicken Masara, Cube Maggie, Black Pepper, Oil"
+    },
+    {
+      "id":"Sauce",
+      "item": "Sauce",
+      "ingredients": "Onions, Green bell Pepper, celery, Beef Masara, Cube Maggie, Black Pepper, Oil, Flour"
+    }
+  ],
+  "Wednesday":[
+    {
+      "id":3,
+      "item": "Rice",
+      "ingredients": "Rice, Onions, Green bell pepper, Oil, Pilau Masala"
+    },
+    {
+      "id":"Potatoe_Chips",
+      "item": "Potatoe Chips",
+      "ingredients": "Potatoes, Oil"
+    },
+    {
+      "id":"Sweet_Potato",
+      "item": "Sweet Potato",
+      "ingredients": "Sweet Potatoe"
+    },
+    {
+      "id":"Vegetables",
+      "item": "Vegetables",
+      "ingredients": "Dodo, onions, Tomatoes, Intoryi, Oil, Garlic"
+    },
+    {
+      "id":"Beans",
+      "item": "Beans",
+      "ingredients": "Beans, Onions, Tomato Paste"
+    },
+    {
+      "id":"Chicken_Meat",
+      "item": "Chicken Meat",
+      "ingredients": "Chicken, Onions, Green bell Pepper, celery, Chicken Masara, Cube Maggie, Black Pepper, Oil"
+    },
+    {
+      "id":"Sauce",
+      "item": "Sauce",
+      "ingredients": "Onions, Green bell Pepper, celery, Beef Masara, Cube Maggie, Black Pepper, Oil, Flour"
+    }
+  ],
+  "Thursday":[
+    {
+      "id":1,
+      "item": "Rice",
+      "ingredients": "Rice, Onions, Green bell pepper, Oil, Pilau Masala"
+    },
+    {
+      "id":"Potatoe_Chips",
+      "item": "Potatoe Chips",
+      "ingredients": "Potatoes, Oil"
+    },
+    {
+      "id":"Sweet_Potato",
+      "item": "Sweet Potato",
+      "ingredients": "Sweet Potatoe"
+    },
+    {
+      "id":"Vegetables",
+      "item": "Vegetables",
+      "ingredients": "Dodo, onions, Tomatoes, Intoryi, Oil, Garlic"
+    },
+    {
+      "id":"Beans",
+      "item": "Beans",
+      "ingredients": "Beans, Onions, Tomato Paste"
+    },
+    {
+      "id":"Chicken_Meat",
+      "item": "Chicken Meat",
+      "ingredients": "Chicken, Onions, Green bell Pepper, celery, Chicken Masara, Cube Maggie, Black Pepper, Oil"
+    },
+    {
+      "id":"Sauce",
+      "item": "Sauce",
+      "ingredients": "Onions, Green bell Pepper, celery, Beef Masara, Cube Maggie, Black Pepper, Oil, Flour"
+    }
+  ],
+  "Friday":[
+    {
+      "id":5,
+      "item": "Rice",
+      "ingredients": "Rice, Onions, Green bell pepper, Oil, Pilau Masala"
+    },
+    {
+      "id":"Potatoe_Chips",
+      "item": "Potatoe Chips",
+      "ingredients": "Potatoes, Oil"
+    },
+    {
+      "id":"Sweet_Potato",
+      "item": "Sweet Potato",
+      "ingredients": "Sweet Potatoe"
+    },
+    {
+      "id":"Vegetables",
+      "item": "Vegetables",
+      "ingredients": "Dodo, onions, Tomatoes, Intoryi, Oil, Garlic"
+    },
+    {
+      "id":"Beans",
+      "item": "Beans",
+      "ingredients": "Beans, Onions, Tomato Paste"
+    },
+    {
+      "id":"Chicken_Meat",
+      "item": "Chicken Meat",
+      "ingredients": "Chicken, Onions, Green bell Pepper, celery, Chicken Masara, Cube Maggie, Black Pepper, Oil"
+    },
+    {
+      "id":"Sauce",
+      "item": "Sauce",
+      "ingredients": "Onions, Green bell Pepper, celery, Beef Masara, Cube Maggie, Black Pepper, Oil, Flour"
+    }
+  ]
+}
+  
