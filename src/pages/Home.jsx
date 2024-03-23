@@ -125,9 +125,9 @@ function Home() {
                             Reflecting on our experiences, we conscientiously analyzed our missteps, diligently absorbing invaluable lessons from each one. 
                             Today, fortified by our newfound wisdom, we stand resolute, committed to delivering exceptional service and culinary experiences that exceed expectations.
                             Welcome to our enduring commitment to excellence.</p>
-                        <Link to="/about">
+                        {/* <Link to="/about">
                             <button type='button' className='btn btn-outline-success btn-lg'>More About Us</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>
