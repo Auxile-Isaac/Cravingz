@@ -48,15 +48,17 @@ function Home() {
             alert('Please select an item before sending!');
         }
     };
-    
+
     // Placeholder function to send selected item to WhatsApp
-    const sendToWhatsApp = (item) => {
+    // Placeholder function to send selected items to WhatsApp
+    const sendToWhatsApp = (items) => {
         const whatsappNumber = '+250788314732'; // Replace with your WhatsApp number
-        const message = `I want to order ${item.item}`;
+        const message = `I want to order:\n${items.map(item => item.item).join('\n')}`;
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
+        // console.log(message);
     };
-    
+
     // Function to handle selecting an item
     const handleSelectItem = (item) => {
         const selectedIndex = selectedItems.findIndex(selectedItem => selectedItem.id === item.id);
