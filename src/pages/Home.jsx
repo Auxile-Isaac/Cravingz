@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 import { ImageGallery } from '../components/ImageGallery';
 import { ContactInfo } from '../components/ContactInfo';
 import ContactImage from '../utils/img/contact-img.jpg';
-import axios from 'axios'; // Import Axios
+import axios from 'axios'; // Import Axios;
+import { WhatsAppWidget } from 'react-whatsapp-widget';
+import 'react-whatsapp-widget/dist/index.css';
 
 function Home() {
     const [menuData, setMenuData] = useState(null);
     const [currentDay, setCurrentDay] = useState("");
     const [tomorrowDay, setTomorrowDay] = useState();
+    const [selectedItem, setSelectedItem] = useState(null);
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -35,14 +38,34 @@ function Home() {
         fetchMenuData();
     }, []);
 
+      // Function to handle form submission
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        if (selectedItem) {
+            // Placeholder function to send selected item to WhatsApp
+            sendToWhatsApp(selectedItem);
+        } else {
+            alert('Please select an item before sending!');
+        }
+    };
 
+    // Placeholder function to send selected item to WhatsApp
+    const sendToWhatsApp = (item) => {
+        const whatsappNumber = '+250788314732'; // Replace with your WhatsApp number
+        const message = `I want to order ${item}`;
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+    };
+
+
+    // Render menu items
     const renderMenuItems = () => {
         if (!menuData || !currentDay || !menuData[currentDay]) {
             return <p> We don't serve Buffet in weekends...</p>;
         }
 
         return menuData[currentDay].map(item => (
-            <li id={'_' + Math.random().toString(36).substr(2, 9)} key={item.id} className='d-flex justify-content-between'>
+            <li id={'_' + Math.random().toString(36).substr(2, 9)} key={item.id} className='d-flex justify-content-between' onClick={() => setSelectedItem(item)}>
                 <label className='fs-3 mx-2' htmlFor={item.id}>{item.item}</label>
                 {/* <p>{id}</p> */}
                 <input type='checkbox' id={item.id} name={item.id} value={item.id}/>
@@ -86,10 +109,10 @@ function Home() {
                     <div className='row mb-5 w-100'>
                         <div className='col-lg-6 d-flex flex-column align-items-center mb-5 mb-lg-0'>
                             <h3 className='fs-2 mb-5'>Today ({currentDay})</h3>
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <ul className='px-0'>
                                     {/* Placeholder drinks */}
-                                    {renderMenuItems()}
+                                    {renderMenuItems(currentDay)}
                                 </ul>
                                 <button type='submit' className='btn btn-outline-success btn-lg'>Send Order</button>
                             </form>
