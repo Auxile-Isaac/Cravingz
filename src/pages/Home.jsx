@@ -41,7 +41,7 @@ function Home() {
     // Function to handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (selectedItems) {
+        if (selectedItems.length > 0) {
             // Placeholder function to send selected item to WhatsApp
             sendToWhatsApp(selectedItems);
         } else {
