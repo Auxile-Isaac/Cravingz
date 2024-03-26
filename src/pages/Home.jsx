@@ -14,7 +14,7 @@ function Home() {
     const [menuData, setMenuData] = useState(null);
     const [currentDay, setCurrentDay] = useState("");
     const [tomorrowDay, setTomorrowDay] = useState();
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItems, setSelectedItems] = useState([]);
 
     useEffect(() => {
         const fetchMenuData = async () => {
@@ -41,9 +41,9 @@ function Home() {
     // Function to handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (selectedItem) {
+        if (selectedItems) {
             // Placeholder function to send selected item to WhatsApp
-            sendToWhatsApp(selectedItem);
+            sendToWhatsApp(selectedItems);
         } else {
             alert('Please select an item before sending!');
         }
@@ -59,7 +59,14 @@ function Home() {
     
     // Function to handle selecting an item
     const handleSelectItem = (item) => {
-        setSelectedItem(item);
+        const selectedIndex = selectedItems.findIndex(selectedItem => selectedItem.id === item.id);
+        if (selectedIndex === -1) {
+            setSelectedItems([...selectedItems, item]);
+        } else {
+            const updatedItems = [...selectedItems];
+            updatedItems.splice(selectedIndex, 1);
+            setSelectedItems(updatedItems);
+        }
     };
 
 
