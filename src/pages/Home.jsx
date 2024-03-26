@@ -23,7 +23,7 @@ function Home() {
                 const data = response.data; // Access response data directly
                 console.log(data);
                 setMenuData(data);
-                
+
                 // Determine current day
                 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
                 const today = new Date().getDay();
@@ -38,8 +38,8 @@ function Home() {
         fetchMenuData();
     }, []);
 
-      // Function to handle form submission
-      const handleSubmit = (event) => {
+    // Function to handle form submission
+    const handleSubmit = (event) => {
         event.preventDefault();
         if (selectedItem) {
             // Placeholder function to send selected item to WhatsApp
@@ -48,13 +48,18 @@ function Home() {
             alert('Please select an item before sending!');
         }
     };
-
+    
     // Placeholder function to send selected item to WhatsApp
     const sendToWhatsApp = (item) => {
         const whatsappNumber = '+250788314732'; // Replace with your WhatsApp number
-        const message = `I want to order ${item}`;
+        const message = `I want to order ${item.item}`;
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
+    };
+    
+    // Function to handle selecting an item
+    const handleSelectItem = (item) => {
+        setSelectedItem(item);
     };
 
 
@@ -65,10 +70,10 @@ function Home() {
         }
 
         return menuData[currentDay].map(item => (
-            <li id={'_' + Math.random().toString(36).substr(2, 9)} key={item.id} className='d-flex justify-content-between' onClick={() => setSelectedItem(item)}>
+            <li id={'_' + Math.random().toString(36).substr(2, 9)} key={item.id} className='d-flex justify-content-between' onClick={() => handleSelectItem(item)}>
                 <label className='fs-3 mx-2' htmlFor={item.id}>{item.item}</label>
                 {/* <p>{id}</p> */}
-                <input type='checkbox' id={item.id} name={item.id} value={item.id}/>
+                <input type='checkbox' id={item.id} name={item.id} value={item.id} />
             </li>
         ));
     };
@@ -82,7 +87,7 @@ function Home() {
             <li id={'_' + Math.random().toString(36).substr(2, 9)} key={item.id} className='d-flex justify-content-between'>
                 <label className='fs-3 mx-2' htmlFor={item.id}>{item.item}</label>
                 {/* <p>{id}</p> */}
-                <input type='checkbox' id={item.id} name={item.id} value={item.id}/>
+                <input type='checkbox' id={item.id} name={item.id} value={item.id} />
             </li>
         ));
     };
@@ -100,7 +105,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </header>            
+            </header>
 
             {/* Menu section */}
             <div className='menu-section py-5 text-light shadow'>
@@ -131,7 +136,7 @@ function Home() {
             </div>
 
             {/* Image gallery section */}
-            
+
             {/* <ImageGallery /> */}
 
             {/* About Us section */}
@@ -142,10 +147,10 @@ function Home() {
                     </div>
                     <div className='col-lg-6 d-flex flex-column align-items-center justify-content-center'>
                         <h2 className='fs-1 mb-5 text-uppercase fw-bold'>About Us</h2>
-                        <p>We inaugurated our establishment amidst the challenges of the pandemic, operating solely as a delivery-based restaurant called BackYard. 
-                            As newcomers to the industry, we embarked on a journey of learning, navigating through the complexities with determination. 
-                            However, shortly after our debut, we encountered setbacks that compelled us to temporarily cease operations. 
-                            Reflecting on our experiences, we conscientiously analyzed our missteps, diligently absorbing invaluable lessons from each one. 
+                        <p>We inaugurated our establishment amidst the challenges of the pandemic, operating solely as a delivery-based restaurant called BackYard.
+                            As newcomers to the industry, we embarked on a journey of learning, navigating through the complexities with determination.
+                            However, shortly after our debut, we encountered setbacks that compelled us to temporarily cease operations.
+                            Reflecting on our experiences, we conscientiously analyzed our missteps, diligently absorbing invaluable lessons from each one.
                             Today, fortified by our newfound wisdom, we stand resolute, committed to delivering exceptional service and culinary experiences that exceed expectations.
                             Welcome to our enduring commitment to excellence.</p>
                         {/* <Link to="/about">
