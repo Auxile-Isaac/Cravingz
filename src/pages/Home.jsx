@@ -52,8 +52,8 @@ function Home() {
     // Placeholder function to send selected item to WhatsApp
     // Placeholder function to send selected items to WhatsApp
     const sendToWhatsApp = (items) => {
-        const whatsappNumber = '+250788314732'; // Replace with your WhatsApp number
-        const message = `I want to order:\n${items.map(item => item.item).join('\n')}`;
+        const whatsappNumber = '+250788963132'; // Replace with your WhatsApp number
+        const message = `Hello, I want to order these Items on the buffet:\n${items.map(item => item.item).join('\n')}`;
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
         // console.log(message);
